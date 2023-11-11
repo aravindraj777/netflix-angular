@@ -16,7 +16,8 @@
         <div class="col-lg-4" *ngFor="let search of searchResult">
             <div class="row">
                 <div class="col-lg-3 mt-4 mb-4" *ngIf="search.poster_path">
-                    <img src="https://image.tmdb.org/t/p/original/{{search.poster_path}}"  alt="...">
+                    <img src="https://image.tmdb.org/t/p/original/{{search.poster_path}}" 
+                    [routerLink]="['/movie',search.id]" alt="...">
                 </div>
                 <div class="col-lg-9 mt-4 mb-4">
                     <h5>{{search.original_title}}</h5>
